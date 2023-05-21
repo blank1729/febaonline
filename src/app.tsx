@@ -7,6 +7,7 @@ import AboutSection from "./components/HOME/About";
 import Blog from "./Pages/Blog";
 import NotFound from "./Pages/NotFound";
 import Contact from "./Pages/Contact";
+import AudioBible from "./Pages/AudioBible";
 
 export const App = () => (
   <>
@@ -17,6 +18,7 @@ export const App = () => (
       <Post path="/post" />
       <Contact path="/contactus" />
       <AboutSection path="/about" />
+      <AudioBible path="/bible" />
       {/* <Profile path="/profile/:user?" /> */}
       <NotFound default />
     </Router>
