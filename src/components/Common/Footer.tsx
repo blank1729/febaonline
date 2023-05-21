@@ -1,4 +1,6 @@
 import { FunctionalComponent } from "preact";
+import { Links } from "../Constants/Links";
+import { Link } from "preact-router";
 
 const Footer: FunctionalComponent = () => {
   return (
@@ -16,26 +18,15 @@ const Footer: FunctionalComponent = () => {
           <div>
             <h3 className="text-xl font-bold text-white mb-4">Quick Links</h3>
             <ul className="text-gray-300">
-              <li className="mb-2">
-                <a href="#" className="hover:text-indigo-400">
-                  Home
-                </a>
-              </li>
-              <li className="mb-2">
-                <a href="#" className="hover:text-indigo-400">
-                  About
-                </a>
-              </li>
-              <li className="mb-2">
-                <a href="#" className="hover:text-indigo-400">
-                  Services
-                </a>
-              </li>
-              <li className="mb-2">
-                <a href="#" className="hover:text-indigo-400">
-                  Contact
-                </a>
-              </li>
+              {Links.map((link) => {
+                return (
+                  <li className="mb-2">
+                    <Link href={link.path} className="hover:text-indigo-400">
+                      {link.name}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
           <div>

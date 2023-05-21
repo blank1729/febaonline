@@ -9,11 +9,8 @@
     "preview": "vite preview --host"
   },
   "dependencies": {
-    "@types/react-slick": "^0.23.10",
     "preact": "^10.13.1",
-    "preact-router": "^4.1.1",
-    "react-router-dom": "^6.11.1",
-    "react-slick": "^0.29.0"
+    "preact-router": "^4.1.1"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.5.0",

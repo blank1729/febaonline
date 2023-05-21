@@ -1,25 +1,7 @@
 import { FunctionalComponent } from "preact";
 import { useState } from "preact/hooks";
 import { Link } from "preact-router/match";
-
-const links = [
-  {
-    name: "Home",
-    path: "/",
-  },
-  {
-    name: "About",
-    path: "/about",
-  },
-  {
-    name: "Post",
-    path: "/post",
-  },
-  {
-    name: "Blog",
-    path: "/blog",
-  },
-];
+import { Links } from "../Constants/Links";
 
 const Navbar: FunctionalComponent = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,7 +11,7 @@ const Navbar: FunctionalComponent = () => {
   };
 
   return (
-    <nav className="bg-blue-900">
+    <nav className="">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
@@ -39,14 +21,14 @@ const Navbar: FunctionalComponent = () => {
           </div>
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-4">
-              {links.map((link) => {
+              {Links.map((link) => {
                 return (
                   <Link
                     onClick={() => setIsOpen(false)}
                     href={link.path}
                     key={link.path}
-                    activeClassName="bg-blue-800"
-                    className="text-gray-300 hover:bg-blue-800 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    activeClassName="text-white bg-blue-600"
+                    className="hover:bg-blue-600 hover:text-white px-3 py-2 rounded-md text-md font-medium"
                   >
                     {link.name}
                   </Link>
@@ -83,7 +65,7 @@ const Navbar: FunctionalComponent = () => {
       {isOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            {links.map((link) => {
+            {Links.map((link) => {
               return (
                 <Link
                   onClick={() => setIsOpen(false)}

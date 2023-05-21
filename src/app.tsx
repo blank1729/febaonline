@@ -5,6 +5,8 @@ import Post from "./Pages/Post";
 import Home from "./Pages/Home";
 import AboutSection from "./components/HOME/About";
 import Blog from "./Pages/Blog";
+import NotFound from "./Pages/NotFound";
+import Contact from "./Pages/Contact";
 
 export const App = () => (
   <>
@@ -13,9 +15,10 @@ export const App = () => (
       <Home path="/" />
       <Blog path="/blog" />
       <Post path="/post" />
+      <Contact path="/contactus" />
       <AboutSection path="/about" />
       {/* <Profile path="/profile/:user?" /> */}
-      {/* <Error type="404" default /> */}
+      <NotFound default />
     </Router>
   </>
 );
