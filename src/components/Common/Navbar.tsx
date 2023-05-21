@@ -1,7 +1,7 @@
 import { FunctionalComponent } from "preact";
 import { useState } from "preact/hooks";
 import { Link } from "preact-router/match";
-import { Links } from "../Constants/Links";
+import { Links } from "../../Constants/Links";
 
 const Navbar: FunctionalComponent = () => {
   const [isOpen, setIsOpen] = useState(false);

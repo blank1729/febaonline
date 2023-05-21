@@ -1,5 +1,5 @@
 import { FunctionalComponent } from "preact";
-import { Links } from "../Constants/Links";
+import { Links } from "../../Constants/Links";
 import { Link } from "preact-router";
 
 const Footer: FunctionalComponent = () => {

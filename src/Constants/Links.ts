@@ -19,8 +19,4 @@ export const Links = [
     name: "Contact Us",
     path: "/contactus",
   },
-  {
-    name: "AudioBible",
-    path: "/bible",
-  },
 ];
